@@ -2,6 +2,10 @@ const fs = require('fs');
 const http = require('http');
 const url = require('url');
 
+// top level code execute one time (synchronus)
+const data = fs.readFileSync(`${__dirname}/dev-data/data.json`, 'utf-8');
+const dataObj = JSON.parse(data);
+
 const server = http.createServer((req, res) => {
   const pathName = req.url;
 
@@ -10,16 +14,8 @@ const server = http.createServer((req, res) => {
   } else if (pathName === '/product') {
     res.end('This is the PRODUCT');
   } else if (pathName === '/api') {
-    fs.readFile(
-      `${__dirname}/dev-data/data.json`,
-      'utf-8',
-      (err, data) => {
-        const productData = JSON.parse(data);
-        console.log(productData);
-      }
-    );
-    //${__dirname}/NodeJS_MongoDB/Chapter_2/dev-data/data.json
-    res.end('API');
+    res.writeHead(200, { 'content-type': 'application/json' });
+    res.end(data);
   } else {
     res.writeHead(404, {
       'content-type': 'text/html',
