@@ -24,3 +24,37 @@ npm outdated
 ```
 npm uninstall/remove express
 ```
+- Prettier config -> [Link](https://prettier.io/docs/options)
+
+### Chapter 3:
+
+1. Request-Response model:
+   - **<ins>https:</ins>** **<ins>//www.google.com</ins>** **<ins>/map</ins>**
+   - _[Porotocol] / [Domain name] / [Resource]_
+
+2. DNS convert link to real address like _https://google.com/maps_ to _https://216.58.211.206:433_
+   - **<ins>https:</ins>** **<ins>//216.58.211.206</ins>** **<ins>:443</ins>**
+   - _[Porotocol] / [IP address] / [Port number]_
+   - TCP/IP socket connection established between browser & server
+   - **HTTPS request**
+   ```
+   GET /maps HTTP/1.1 (start line: http method + request target + http version)
+   
+   Host: www.google.com (HTTP request headers can be many)
+   User-Agent: Mozila/5.0
+   Accept-Language: en-US
+
+   <BODY> (only send data to the server)
+   ```
+   - What is the difference between http * https?
+     - https use TLS or SSL encryption
+   - HTTPS response
+   ```
+   HTTP/1.1 200 OK (start line: http method + status code + status message)
+   
+   Date: Fri, 18, Jan 2021 (HTTP response headers can be many)
+   Content-Type: text/html
+   Transfer-Encoding: chunked
+
+   <BODY> (response body)
+   ```
