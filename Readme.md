@@ -61,4 +61,6 @@ npm uninstall/remove express
 
 
 ### Chapter 4:
-- ![call-back-queues](./NodeJS_MongoDB/Chapter_4/nodejs-callback-query.PNG)
+![call-back-queues](./NodeJS_MongoDB/Chapter_4/nodejs-callback-query.PNG)
+![event-driven-architecture](./NodeJS_MongoDB/Chapter_4/event-driven-architecture.png)
+![streams](./NodeJS_MongoDB/Chapter_4/streams.png)
