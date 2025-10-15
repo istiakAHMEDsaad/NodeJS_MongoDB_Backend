@@ -64,3 +64,7 @@ npm uninstall/remove express
 ![call-back-queues](./NodeJS_MongoDB/Chapter_4/nodejs-callback-query.PNG)
 ![event-driven-architecture](./NodeJS_MongoDB/Chapter_4/event-driven-architecture.png)
 ![streams](./NodeJS_MongoDB/Chapter_4/streams.png)
+
+### Chapter 5:
+- [Dog api](https://dog.ceo/dog-api/documentation/)
+- NPM Package: [superagent](https://www.npmjs.com/package/superagent?activeTab=readme)
