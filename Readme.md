@@ -68,3 +68,6 @@ npm uninstall/remove express
 ### Chapter 5:
 - [Dog api](https://dog.ceo/dog-api/documentation/)
 - NPM Package: [superagent](https://www.npmjs.com/package/superagent?activeTab=readme)
+
+### Chapter 6:
+- [Express 4.21.2](https://www.npmjs.com/package/express/v/4.21.2)
