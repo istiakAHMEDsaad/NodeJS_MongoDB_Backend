@@ -1,0 +1,27 @@
+const express = require("express");
+const app = express();
+
+// Fake DB function that returns a promise
+function getUser(id) {
+  return new Promise((resolve, reject) => {
+    if (id === "1") resolve({ id: 1, name: "John" });
+    else reject(new Error("User not found"));
+  });
+}
+
+// Route (need try/catch or .catch)
+app.get("/users/:id", async (req, res, next) => {
+  try {
+    const user = await getUser(req.params.id);
+    res.json(user);
+  } catch (err) {
+    next(err); // must manually forward error
+  }
+});
+
+// Error handler
+app.use((err, req, res, next) => {
+  res.status(500).json({ message: err.message });
+});
+
+app.listen(3000, () => console.log("Express 4 running..."));

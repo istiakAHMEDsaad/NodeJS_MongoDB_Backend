@@ -1,18 +1,20 @@
+const fs = require('fs');
 const express = require('express');
 const app = express();
 const port = 3000;
 
-// get method
-app.get('/', (req, res) => {
-  res.status(200).json({
-    message: 'Hello from the server side!',
-    app: 'Natours',
-  });
-});
+const tours = JSON.parse(
+  fs.readFileSync(`${__dirname}/dev-data/data/tours-simple.json`)
+);
 
-// post method
-app.post('/', (req, res) => {
-  res.send('You can post this on endpoint!');
+app.get('/api/v1/tours', (req, res) => {
+  res.status(200).json({
+    status: 'success',
+    results: tours.length,
+    data: {
+      tours //tours: tours 'if its same value we dont need to define'
+    }
+  })
 });
 
 app.listen(port, () => {
