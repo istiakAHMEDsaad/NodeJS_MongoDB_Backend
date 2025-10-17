@@ -24,9 +24,31 @@ app.get('/api/v1/tours', (req, res) => {
 
 // TODO2: get single tour
 app.get(`/api/v1/tours/:id`, (req, res) => {
-  console.log(req.params);
+  // conver string to integer
+  const id = req.params.id * 1;
+
+  /*if (id > tours.length - 1) {
+    return res.status(404).json({
+      status: 'fail',
+      message: 'Invalid ID',
+    });
+  }
+  const tour = tours.find((el) => el.id === id); */
+
+  const tour = tours.find((el) => el.id === id);
+
+  if (!tour) {
+    return res.status(404).json({
+      status: 'fail',
+      message: 'Invalid ID',
+    });
+  }
+
   res.status(200).json({
     status: 'successs',
+    data: {
+      tour,
+    },
   });
 });
 
