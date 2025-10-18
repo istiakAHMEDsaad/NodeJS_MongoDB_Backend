@@ -22,7 +22,7 @@ app.get('/api/v1/tours', (req, res) => {
   });
 });
 
-// TODO2: get single tour
+// TODO: get single tour
 app.get(`/api/v1/tours/:id`, (req, res) => {
   // conver string to integer
   const id = req.params.id * 1;
@@ -52,7 +52,7 @@ app.get(`/api/v1/tours/:id`, (req, res) => {
   });
 });
 
-// TODO3: post methods
+// TODO2: post methods
 app.post('/api/v1/tours', (req, res) => {
   // for local database add id manually
   const newId = tours[tours.length - 1].id + 1;
@@ -75,9 +75,9 @@ app.post('/api/v1/tours', (req, res) => {
   );
 });
 
+// TODO3: patch methods
 // put -> entire new update object,
 // patch -> only update properties
-
 app.patch(`/api/v1/tours/:id`, (req, res) => {
   if (req.params.id * 1 > tours.length) {
     return res.status(404).json({
@@ -91,6 +91,22 @@ app.patch(`/api/v1/tours/:id`, (req, res) => {
     data: {
       tour: `<Updated tour here...>`,
     },
+  });
+});
+
+// TODO4: delete methods
+app.delete('/api/v1/tours/:id', (req, res) => {
+  if (parseInt(req.params.id) > tours.length) {
+    return res.status(404).json({
+      status: 'fail',
+      message: 'Invalid ID',
+    });
+  }
+
+  // status 204 means (deleted/no content)
+  res.status(204).json({
+    status: 'sucess',
+    data: null,
   });
 });
 
