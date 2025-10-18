@@ -61,9 +61,9 @@ npm uninstall/remove express
 
 
 ### Chapter 4:
-![call-back-queues](./NodeJS_MongoDB/Chapter_4/nodejs-callback-query.PNG)
-![event-driven-architecture](./NodeJS_MongoDB/Chapter_4/event-driven-architecture.png)
-![streams](./NodeJS_MongoDB/Chapter_4/streams.png)
+![call-back-queues](./NodeJS_MongoDB/Chapter-4/nodejs-callback-query.jpg)
+![event-driven-architecture](./NodeJS_MongoDB/Chapter-4/event-driven-architecture.jpg)
+![streams](./NodeJS_MongoDB/Chapter-4/streams.png)
 
 ### Chapter 5:
 - [Dog api](https://dog.ceo/dog-api/documentation/)
@@ -71,3 +71,7 @@ npm uninstall/remove express
 
 ### Chapter 6:
 - [Express 4.21.2](https://www.npmjs.com/package/express/v/4.21.2)
+- optional for typescript type
+```
+npm install --save-dev @types/express @types/node
+```
