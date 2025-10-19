@@ -75,3 +75,4 @@ npm uninstall/remove express
 ```
 npm install --save-dev @types/express @types/node
 ```
+- ![express middleware](./NodeJS_MongoDB/Chapter-6-natours_API/middleware.PNG)
