@@ -18,11 +18,4 @@ router
 
 module.exports = router;
 
-
-/*const {
-  getAllTours,
-  getTour,
-  createTour,
-  updateTour,
-  deleteTour,
-} = require('../contollers/tourController');*/
+// multiple chaining start
