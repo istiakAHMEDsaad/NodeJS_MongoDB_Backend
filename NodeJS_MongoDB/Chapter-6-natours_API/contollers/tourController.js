@@ -15,18 +15,11 @@ exports.checkID = (req, res, next, val) => {
   next();
 };
 
-exports.checkBodyMiddleware = (req, res, next, val) => {
-  const name = req.body;
-  const price = req.body;
-  if (name && price) {
-    return res.status(200).json({
-      status: 'success',
-      message: 'name and price are exist on the body!',
-    });
-  } else {
+exports.checkBody = (req, res, next) => {
+  if (!req.body.name || !req.body.price) {
     return res.status(400).json({
       status: 'fail',
-      message: 'not available',
+      message: 'name and price are missing!',
     });
   }
   next();
