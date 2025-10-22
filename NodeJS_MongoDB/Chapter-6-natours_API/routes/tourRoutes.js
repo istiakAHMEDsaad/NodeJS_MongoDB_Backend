@@ -17,11 +17,3 @@ router
   .delete(tourController.deleteTour);
 
 module.exports = router;
-
-/*const {
-  getAllTours,
-  getTour,
-  createTour,
-  updateTour,
-  deleteTour,
-} = require('../contollers/tourController');*/
