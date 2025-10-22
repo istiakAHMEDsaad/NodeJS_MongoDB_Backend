@@ -15,6 +15,23 @@ exports.checkID = (req, res, next, val) => {
   next();
 };
 
+exports.checkBodyMiddleware = (req, res, next, val) => {
+  const name = req.body;
+  const price = req.body;
+  if (name && price) {
+    return res.status(200).json({
+      status: 'success',
+      message: 'name and price are exist on the body!',
+    });
+  } else {
+    return res.status(400).json({
+      status: 'fail',
+      message: 'not available',
+    });
+  }
+  next();
+};
+
 // TODO1: get all tours
 exports.getAllTours = (req, res) => {
   console.log(req.requestTime);
