@@ -48,7 +48,16 @@ db.tours.find({ price: {$lt: 500}, rating: {$gte: 4.8} })
 
 # or query (need only 1 value to be true) {$or}
 db.tours.find({ $or: [ {price: {$lt: 500}}, {rating: {$gte: 4.8}} ] })
-db.tours.find({ $or: [ {price: {$gt: 500}}, {rating: {$gte: 4.8}} ] })
 
 # pass object as projection {means: we only want the name to be output, others are not gonna appear}
 db.tours.find({ $or: [ {price: {$gt: 500}}, {rating: {$gte: 4.8}} ] }, {name: 1})
+
+# --------- 4. querying reading documents ---------
+db.tours.updateOne({ name: "The Snow Adventurer"}, {$set: {Price: 597}})
+db.tours.find({ price: {$gt: 500}, rating: {$gte: 4.8} })
+# db.tours.find({ $and: [ {price: {$gt: 500}}, {rating: {$gte: 4.8}} ] })
+db.updateMany({ price: {$gt: 500}, rating: {$gte: 4.8} }, { $set: {premium: true} })
+db.tours.find()
+
+# replaceOne or replaceMany
+db.tours.replaceOne()
