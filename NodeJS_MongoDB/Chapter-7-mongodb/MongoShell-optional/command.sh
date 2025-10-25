@@ -61,3 +61,9 @@ db.tours.find()
 
 # replaceOne or replaceMany
 db.tours.replaceOne()
+
+
+# --------- 5. deleting documents ---------
+db.tours.deleteMany({rating: {$lt: 4.8}})
+# DELETE ALL empty object basically a condition all of the documents always match
+db.tours.deleteMany({})
