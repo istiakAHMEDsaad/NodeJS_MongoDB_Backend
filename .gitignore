@@ -1,2 +1,5 @@
 desktop.ini
 node_modules
+.env
+.env.local
+NodeJS_MongoDB/Chapter-6-natours_API/config.env
