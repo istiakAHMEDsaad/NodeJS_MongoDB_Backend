@@ -19,7 +19,7 @@ use admin
 use natours-test
 
 # show database collection
-show collection
+show collections
 
 # exit the databse/shell
 quit()
