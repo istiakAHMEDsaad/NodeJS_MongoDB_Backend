@@ -118,3 +118,6 @@ npm install --save-dev @types/express @types/node
 ### Chapter 6:
 
 ![mongo](./NodeJS_MongoDB/Chapter-7-mongodb/dbms-mongo.jpg)
+**[MongoDB Command](https://github.com/istiakAHMEDsaad/NodeJS_MongoDB_Backend/blob/main/NodeJS_MongoDB/Chapter-7-mongodb/MongoShell-optional/command.sh)**
+
+### Chapter 7:
