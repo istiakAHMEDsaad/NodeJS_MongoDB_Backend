@@ -121,3 +121,23 @@ npm install --save-dev @types/express @types/node
 **[MongoDB Command](https://github.com/istiakAHMEDsaad/NodeJS_MongoDB_Backend/blob/main/NodeJS_MongoDB/Chapter-7-mongodb/MongoShell-optional/command.sh)**
 
 ### Chapter 7:
+
+
+
+
+
+
+### optional: how to untrack or delete a file from git
+```
+# untrack
+git rm --cached folder_name/config.env
+
+# again push
+git add .gitignore
+git commit -m "Ignore config.env and remove from tracking"
+git push
+
+# Verify it’s removed
+git ls-files | grep config.env
+```
+[dotenvx](https://dotenvx.com/features/precommit)
